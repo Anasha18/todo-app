@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: off
+
+  liquibase:
+    enabled: true
+    change-log: /db/changelog/db.changelog-master.yaml
+    driver-class-name: org.postgresql.Driver
+    user: todo
+    password: todo
+    url: jdbc:postgresql://localhost:5432/todo
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: todo
+    password: todo
+    url: jdbc:postgresql://localhost:5432/todo
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+
+app:
+  ttl: 30
+
+
